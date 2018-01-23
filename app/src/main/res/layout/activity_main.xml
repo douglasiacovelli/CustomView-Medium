@@ -1,18 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.iacovelli.customview.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <HorizontalScrollView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingStart="16sp"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12sp"
+            android:orientation="horizontal">
+
+            <com.iacovelli.customview.BenefitView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="Apply and chat with our hosts"
+                app:image="@drawable/first_image"
+                android:layout_marginEnd="12dp"/>
+
+            <com.iacovelli.customview.BenefitView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="Support before, during and after your trip"
+                app:image="@drawable/second_image"
+                android:layout_marginEnd="12dp"/>
+
+            <com.iacovelli.customview.BenefitView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:text="Exclusive Discounts in Products and Accommodation"
+                app:image="@drawable/third_image" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </android.support.constraint.ConstraintLayout>
